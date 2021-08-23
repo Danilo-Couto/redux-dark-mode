@@ -42,12 +42,12 @@ Neste exercício, verificamos se voce é capaz de:
   * A informação de login do usuário, `email` e `password`;
 ​
 #### 3. Desenvolva as `actions`:
-  * Será necessária uma action para salvar o e-mail e password do usuário.
+  * Será necessária uma action para salvar o e-mail e githubUser do usuário.
   * Outra action para alterar o tema de dark para light e vice e versa.
 ​
 #### 4. Crie um componente <Login />:
   * O componente deve possuir um formulário.
-  * O formulário deve possuir dois campos de input, email e senha;
+  * O formulário deve possuir dois campos de input, email e githubUser;
   * O formulário deve possuir um botão de 'login' para a submissão do formulário ;
 ​
 ​
@@ -59,6 +59,14 @@ Neste exercício, verificamos se voce é capaz de:
   * Configure o mapStateToProps, para acessar o estado do redux, ‘dark’ e ‘light’ mode, através do Redux.
   * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com o tema da aplicação.
 ​
-#### 7. Bônus
+#### 7. Adicione rotas à aplicação de forma que a pessoa usuária consiga acessar `/login` e ao fazer login ser redirecionada para `/home`.
+  * A página de login deve ser redirecionada para a `/home` da aplicação.
+  * Se o usário não estiver logado e tentar acessar a rota `/home` redirecione a pessoa usuária para a tela de login, e mostre uma mensagem de que o login não foi realizado.
+
+#### 8. Renderize a lista de repositórios do github da pessoa usuária logada.
+ * Faça uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo githubUser da pessoa usuária logada.
+ * Liste os repositórios do github da pessoa usuária logada.
+ 
+#### 9. Bônus
   * Caprichem no CSS.
  ---
