@@ -66,6 +66,7 @@ Neste exercício, verificamos se voce é capaz de:
 #### 8. Renderize a lista de repositórios do github da pessoa usuária logada.
  * Faça uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo githubUser da pessoa usuária logada.
  * Liste os repositórios do github da pessoa usuária logada.
+ * Salve a lista de repositórios do github no redux.
  
 #### 9. Bônus
   * Caprichem no CSS.
