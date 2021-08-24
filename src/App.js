@@ -13,8 +13,8 @@ function App() {
         <DarkModeButton />
       </header>
       <Switch>
+        <Route path="/login" component={Login} />
         <Route path="/" component={GithubList} />
-        <Route path="login" component={Login} />
       </Switch>
     </div>
   );
