@@ -56,40 +56,41 @@ Além disso sua aplicação deve conter os componentes ```<DarkModeButton />```,
   * Será necessária uma action para salvar o e-mail e githubUser do usuário.
   * Outra action para alterar o tema de dark para light e vice e versa.
 ​
-#### 4. Crie um componente `<Login />`:
-  * O componente deve possuir um formulário.
-  * O formulário deve possuir dois campos de input, `email` e `githubUser`;
-  * O formulário deve possuir um botão de `login` para a submissão do formulário ;
-​
----  
-## 2️⃣  MOMENTO SÍNCRONO
-#### 5. Crie o componente `<GithubList />`:
-  * O componente deve fazer uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo `githubUser` da pessoa logada;
-  * Salve a lista de reposistórios do github recebida no estado do Redux na key `repoList`; 
-  * Renderize a lista de `repositórios do github` da pessoa usuária logada, pegando essa informação do redux;
-  
-#### 6. Configure o acesso do componente `Login` a action que salva os dados de login
-  * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com os dados de login da pessoa usuária.
-​
-#### 7. Configure o acesso do componente `DarkModeButton` ao estado da store e à action que altera os dados do tema da aplicação
-  * Configure o mapStateToProps, para acessar o estado do redux, `dark` e `light` mode, através do Redux.
-  * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com o tema da aplicação.
-​  
-#### 8. Configure o acesso do componente `GithubLIst` ao estado da store e à action que altera os dados do tema da aplicação
-  * Configure o mapDispatchToProps para que o componente acesse a action e consiga enviar a lista recebida da api para o estado da store.
-  * Configure o mapStateToProps, para acessar o estado do redux `repoList`.
-​  
-
-
----    
-## 3️⃣  DURANTE A MENTORIA
-#### 9. Adicione rotas à sua aplicação
+#### 4. Adicione rotas à sua aplicação
   * Instale a biblioteca React Router
 ````
 npm install react-router-dom
 ````
   * Adicione os componentes `<Switch />` e `<Route />` e crie as rotas `/login` e `/home`.
   * Essas rotas devem dar acesso aos componentes `<Login />` e `<GithubList />` respectivamente.
+
+---  
+## 2️⃣  MOMENTO SÍNCRONO
+
+#### 5. Crie um componente `<Login />`:
+  * O componente deve possuir um formulário.
+  * O formulário deve possuir dois campos de input, `email` e `githubUser`;
+  * O formulário deve possuir um botão de `login` para a submissão do formulário ;
+​  
+#### 6. Crie o componente `<GithubList />`:
+  * O componente deve fazer uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo `githubUser` da pessoa logada;
+  * Salve a lista de reposistórios do github recebida no estado do Redux na key `repoList`; 
+  * Renderize a lista de `repositórios do github` da pessoa usuária logada, pegando essa informação do redux;
+  
+#### 7. Configure o acesso do componente `Login` a action que salva os dados de login
+  * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com os dados de login da pessoa usuária.
+​  
+#### 8. Configure o acesso do componente `DarkModeButton` ao estado da store e à action que altera os dados do tema da aplicação
+  * Configure o mapStateToProps, para acessar o estado do redux, `dark` e `light` mode, através do Redux.
+  * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com o tema da aplicação.
+​  
+#### 9. Configure o acesso do componente `GithubLIst` ao estado da store e à action que altera os dados do tema da aplicação
+  * Configure o mapDispatchToProps para que o componente acesse a action e consiga enviar a lista recebida da api para o estado da store.
+  * Configure o mapStateToProps, para acessar o estado do redux `repoList`.
+​  
+
+---    
+## 3️⃣  DURANTE A MENTORIA
 
 #### 10. Configure o redirecionamento da aplicação para após o login, enviar a pessoa logada para a rota `/home`.
   * A pessoa usuária deve acessar a rota `/login`, os dados do login devem ser salvos no redux.
