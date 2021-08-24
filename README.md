@@ -1,11 +1,10 @@
-# Boas vindas ao repositório Redux Dark Mode React!
-Este repositório contém a descrição do exercício prático de Redux para o dia 16.3!
-Você deverá criar uma tela de login, e implementar o dark mode em um botão já existente na aplicação, utilizando o Redux !!!
+# Exercício de fixação Redux Dark Mode React!
+Let's go team Redux! 🔥
+  
+## Como vai funcionar? 🚀
+Este exercício será realizado em 3 momentos. Um momento assíncrono, antes da aula, um momento síncrono durante a aula ao vivo e o último momento durante a mentoria. 
 
-
-## Como vai funcionar?
-Este exercício será realizado em dois momentos. O 1o momento será antes da aula ao vivo `individual` e o 2o momento será durante a aula ao vivo.
-
+---  
 ## Habilidades
 Neste exercício, verificamos se voce é capaz de:
   * Criar um store Redux em aplicações React
@@ -16,30 +15,42 @@ Neste exercício, verificamos se voce é capaz de:
 ​
 ---
 
-### Antes de começar
-1. Clone o repositório
-2. Instale as dependências e inicialize o projeto
-3. Crie uma branch a partir da branch `master`
-​
-​
-## Instruções do Exercício
-1a parte - antes da aula;
-  - Criar a estrutura do Redux e conectar ao dark mode;
-​
-2a parte - durante a aula;
-  - Criar a tela de login e conectar ao dark mode;
+## Antes de começar
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
-## Requisitos
+Após feito o fork, clone o repositório criado para o seu computador.
+Rode o npm install.
 
-### MOMENTO ASSÍNCRONO
+---  
+
+## Como desenvolver
+Nesta aplicação você deverá utilizar o seguinte formato no estado global:
+````
+{
+  user: {
+    email: '',
+    githubUser: '',
+  },
+  theme: '',
+  repoList: [],
+}
+````
+
+Além disso sua aplicação deve conter os componentes ```<DarkModeButton />```, `<Login />` e `<GithubList />`.
+
+---  
+
+# Requisitos
+
+## 1️⃣  MOMENTO ASSÍNCRONO
 #### 1. Faça a configuração inicial do Redux criando a `store` e o `provider`;
   * Crie o arquivo da `store`;
-  * Adicione o Provider à aplicação, recebendo a store por parâmetro;
+  * Adicione o `provider` à aplicação, recebendo a store por parâmetro;
 ​
 #### 2. Crie a configuração do `reducer` com o INITIAL_STATE, definindo as informações que deverão ser salvas no estado global.
   Devem ser salvos:
-  * O tema da aplicação, se escuro ou claro, `theme` como `dark` ou `light`;
-  * A informação de login do usuário, `email` e `password`;
+  * O tema da aplicação, na key `theme` como `dark` ou `light`;
+  * A informação de login do usuário, `email` e `githubUser`;
 ​
 #### 3. Desenvolva as `actions`:
   * Será necessária uma action para salvar o e-mail e githubUser do usuário.
@@ -47,27 +58,44 @@ Neste exercício, verificamos se voce é capaz de:
 ​
 #### 4. Crie um componente <Login />:
   * O componente deve possuir um formulário.
-  * O formulário deve possuir dois campos de input, email e githubUser;
+  * O formulário deve possuir dois campos de input, 'email' e 'githubUser';
   * O formulário deve possuir um botão de 'login' para a submissão do formulário ;
 ​
-​
-### MOMENTO SÍNCRONO
-#### 5. Configure o acesso do componente `Login` a action que salva os dados de login
+---  
+## 2️⃣  MOMENTO SÍNCRONO
+#### 5. Crie o componente <GithubList />:
+  * O componente deve fazer uma chamada a api, utilizando o  
+
+# ⚠️ em construção !!!
+
+#### 5. Configure Rotas à sua aplicação
+  * Instale a biblioteca React Router
+````
+npm install react-router-dom
+````
+  * Adicione os componentes <Switch /> e <Route /> e crie as rotas /login e /home.
+
+#### 8. Adicione rotas à aplicação de forma que a pessoa usuária consiga acessar `/login` e ao fazer login ser redirecionada para `/home`.
+  * A pessoa usuária deve acessar a rota `/login`, os dados do login devem ser salvos no redux.
+  * Após o login a pessoa deve ser redirecionada para a página `/home` da aplicação.
+  * Se o usário não estiver logado e tentar acessar a rota `/home` digitando a rota na url, a pessoa usuária deve receber uma mensagem de que o login não foi realizado, e deve ser redirecionada para a página de login.
+  
+#### 6. Configure o acesso do componente `Login` a action que salva os dados de login
   * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com os dados de login da pessoa usuária.
 ​
-#### 6. Configure o acesso do componente `DarkModeButton` ao estado da store e à action que altera os dados do tema da aplicação
+#### 7. Configure o acesso do componente `DarkModeButton` ao estado da store e à action que altera os dados do tema da aplicação
   * Configure o mapStateToProps, para acessar o estado do redux, ‘dark’ e ‘light’ mode, através do Redux.
   * Configure o mapDispatchToProps para que o componente acesse a action e consiga alterar o estado da store com o tema da aplicação.
 ​
-#### 7. Adicione rotas à aplicação de forma que a pessoa usuária consiga acessar `/login` e ao fazer login ser redirecionada para `/home`.
-  * A página de login deve ser redirecionada para a `/home` da aplicação.
-  * Se o usário não estiver logado e tentar acessar a rota `/home` redirecione a pessoa usuária para a tela de login, e mostre uma mensagem de que o login não foi realizado.
 
-#### 8. Renderize a lista de repositórios do github da pessoa usuária logada.
- * Faça uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo githubUser da pessoa usuária logada.
+
+---    
+## 3️⃣  DURANTE A MENTORIA
+#### 9. Renderize a lista de `repositórios do github` da pessoa usuária logada. 
+ * Faça uma chamada à api do github através da url: https://api.github.com/users/USERNAME/repos substituindo o USERNAME pelo `githubUser` da pessoa usuária logada.
+ * Salve a lista de repositórios do github na key `repoList` no redux.
  * Liste os repositórios do github da pessoa usuária logada.
- * Salve a lista de repositórios do github no redux.
- 
-#### 9. Bônus
+
+#### 10. CSS 💅🏽
   * Caprichem no CSS.
  ---
