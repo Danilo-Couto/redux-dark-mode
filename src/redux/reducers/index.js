@@ -1,21 +1,24 @@
 import { CHANGE_THEME, LOGIN, LOGOUT, RECEIVE_REPO_LIST } from "../actions/actionTypes";
 
 const INITIAL_STATE = {
-  user: {
+  user: JSON.parse(localStorage.getItem("user")) || {
     email: '',
     gitHubUser: '',
   },
-  theme: 'light',
+  theme: localStorage.getItem('theme') || 'light',
   repoList: [],
 };
 
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CHANGE_THEME:
-      return { ...state, theme: state.theme === 'light' ? 'dark' : 'light'};
+      const theme = state.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      return { ...state, theme };
 
     case LOGIN:
       const { user } = action;
+      localStorage.setItem('user', JSON.stringify(user));
       return { ...state, user };
 
     case LOGOUT:
