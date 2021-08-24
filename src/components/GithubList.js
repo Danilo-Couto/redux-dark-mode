@@ -5,7 +5,7 @@ import { actionGetRepoList } from '../redux/actions'
 export class GithubList extends Component {
   componentDidMount() {
     const { dispatchRepoList, githubUser } = this.props;
-    dispatchRepoList(githubUser);
+    if (githubUser) dispatchRepoList(githubUser);
   }
 
   render() {

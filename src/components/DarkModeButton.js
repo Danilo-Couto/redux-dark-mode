@@ -8,7 +8,7 @@ class DarkModeButton extends Component {
     return (
       <div className="switchButton">
         <label class="switch">
-          <input type="checkbox" onChange={changeTheme} checked={theme === 'light'} />
+          <input type="checkbox" onChange={changeTheme} checked={theme === 'dark'} />
           <span class="slider round" />
         </label>
       </div>
