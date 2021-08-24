@@ -28,7 +28,7 @@ Rode o comando `npm install`.
 Instale todas as bibliotecas redux, react-redux e react-router-dom com o comando
 
 ````
-npm install redux react-redux react-router-dom
+npm install redux react-redux react-router-dom redux-thunk
 ````
 
 Nesta aplicação você deverá utilizar o seguinte formato no estado global:
