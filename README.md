@@ -107,7 +107,7 @@ Além disso crie os componentes ```<DarkModeButton />```, `<Login />` e `<Github
   * Após o login a pessoa deve ser redirecionada para a página `/home` da aplicação, onde o componente `<GithubList />` deve ser renderizado.
   * Se o usuário não estiver logado, e tentar acessar a rota `/home`, digitando a rota na url, a pessoa usuária deve receber uma mensagem de que o login não foi realizado, e deve ser redirecionada para a página de login.
 
-### 11. Crie um botão de Logout
+### 9. Crie um botão de Logout
   * Ao clicar nesse botão, os dados salvos no redux deverão voltar ao valor inicial e a pessoa deve ser redirecionada para a página de login.
 
 ### 10. Configure o local storage
