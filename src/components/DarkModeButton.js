@@ -7,9 +7,9 @@ class DarkModeButton extends Component {
     const { changeTheme, theme } = this.props;
     return (
       <div className="switchButton">
-        <label class="switch">
+        <label className="switch">
           <input type="checkbox" onChange={changeTheme} checked={theme === 'dark'} />
-          <span class="slider round" />
+          <span className="slider round" />
         </label>
       </div>
     );

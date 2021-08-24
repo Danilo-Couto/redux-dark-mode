@@ -1,9 +1,9 @@
 import getUserRepositories from "../../service/githubAPI";
 import { CHANGE_THEME, LOGIN, LOGOUT, RECEIVE_REPO_LIST, START_FETCHING_REPO } from "./actionTypes";
 
-export const actionLogin = (email, githubUser) => ({
+export const actionLogin = (email, gitHubUser) => ({
   type: LOGIN,
-  user: { email, githubUser }
+  user: { email, gitHubUser }
 });
 
 export const actionLogout = () => ({

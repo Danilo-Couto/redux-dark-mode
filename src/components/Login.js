@@ -11,11 +11,12 @@ export class Login extends Component {
     }
   }
 
-  onSubmit = (e) => {
+  onSubmit = async (e) => {
     const { email, gitHubUser } = this.state;
-    const { dispatchLogin } = this.props;
+    const { dispatchLogin, history } = this.props;
     e.preventDefault();
     dispatchLogin(email, gitHubUser);
+    history.push('/');
   }
 
   onChange = (e) => {

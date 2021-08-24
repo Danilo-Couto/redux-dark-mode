@@ -4,10 +4,14 @@ import { actionGetRepoList } from '../redux/actions'
 
 export class GithubList extends Component {
   componentDidMount() {
-    const { dispatchRepoList, githubUser } = this.props;
-    if (githubUser) dispatchRepoList(githubUser);
+    const { dispatchRepoList, gitHubUser, history } = this.props;
+    console.log(gitHubUser, 'update');
+    if (gitHubUser) dispatchRepoList(gitHubUser);
+    else {
+      alert('Você precisa estar logado para acessar está página!');
+      history.push('login');
+    }
   }
-
   render() {
     const { repoList } = this.props;
     return (
