@@ -24,6 +24,13 @@ Rode o comando `npm install`.
 ---  
 
 ## Como desenvolver
+
+Instale todas as bibliotecas redux, react-redux e react-router-dom com o comando
+
+````
+npm install redux react-redux react-router-dom
+````
+
 Nesta aplicação você deverá utilizar o seguinte formato no estado global:
 
 ````
@@ -69,10 +76,6 @@ Além disso crie os componentes ```<DarkModeButton />```, `<Login />` e `<Github
   * Outra action para alterar o tema de dark para light e vice e versa.
 ​
 ### 4. Adicione rotas à sua aplicação
-  * Instale a biblioteca React Router
-````
-npm install react-router-dom
-````
   * Utilizando os componentes `<Switch />` e `<Route />`, crie as rotas `/login` e `/home`.
     * Essas rotas devem dar acesso aos componentes `<Login />` e `<GithubList />` respectivamente.
 
