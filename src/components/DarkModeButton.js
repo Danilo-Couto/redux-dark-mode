@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class DarkModeButton extends Component {
+  
   render() {
     return (
       <div className="switchButton">
